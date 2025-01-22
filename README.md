@@ -28,11 +28,14 @@
 1. **Input Configurations**:
    - Define Spark configurations, input paths, and output directory locations in the `config/config.yaml` file.
    - Specify the analyses to run by setting `analyses_to_run` in the configuration.
-2. **Run the analysis**:
+2. **Run below cmd to add root file temporarily in PYTHONPATH**: 
+   ```bash
+   export PYTHONPATH=$(pwd):$PYTHONPATH
+   ```
+3. **Run the analysis**:
    ```bash
    spark-submit --master local[*] src/main.py
    ```
-   This command will execute the analyses as defined in the configuration file.
 
 ---
 
