@@ -15,9 +15,9 @@ logging:
 # input data
 input_data:
   primary_person_data: "data/raw/Primary_Person_use.csv"
-  units_data: "data/raw//Units_use.csv"
-  damages_data: "data/raw//Damages_use.csv"
-  charges_data: "data/raw//Charges_use.csv"
+  units_data: "data/raw/Units_use.csv"
+  damages_data: "data/raw/Damages_use.csv"
+  charges_data: "data/raw/Charges_use.csv"
 
 # output data
 output_data:
@@ -37,14 +37,14 @@ output_data:
 
 # analysis to run
 analyses_to_run:
-  # - src.analysis.analysis_1.Analysis1
-  # - src.analysis.analysis_2.Analysis2
-  # - src.analysis.analysis_3.Analysis3
-  # - src.analysis.analysis_4.Analysis4
+  - src.analysis.analysis_1.Analysis1
+  - src.analysis.analysis_2.Analysis2
+  - src.analysis.analysis_3.Analysis3
+  - src.analysis.analysis_4.Analysis4
   - src.analysis.analysis_5.Analysis5
-  # - src.analysis.analysis_6.Analysis6
-  # - src.analysis.analysis_7.Analysis7
-  # - src.analysis.analysis_8.Analysis8
-  # - src.analysis.analysis_9.Analysis9
-  # - src.analysis.analysis_10.Analysis10
+  - src.analysis.analysis_6.Analysis6
+  - src.analysis.analysis_7.Analysis7
+  - src.analysis.analysis_8.Analysis8
+  - src.analysis.analysis_9.Analysis9
+  - src.analysis.analysis_10.Analysis10
 
