@@ -40,6 +40,8 @@ class Analysis5(BaseAnalysis):
             # Rename column for clarity in output
             result_df = result_df.withColumnRenamed('DRVR_LIC_STATE_ID', 'state_with_highest_number_of_accidents_in_which_females_are_not_involved')
 
+            result_df = result_df.drop('cnt')
+
             # Log and save results
             self.logger.info(f"State with the highest number of accidents in which females are not involved: {top_state}, Count: {top_count}")
             self.save_results(result_df, self.config['output_data']['analysis_5'])
