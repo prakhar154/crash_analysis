@@ -24,6 +24,14 @@ class ConfigLoader:
             If there is an error reading or parsing the YAML file.
         """
         if ConfigLoader._config is None:  # Load config only if it hasn't been loaded yet
+            # print(os.getcwd())
+            # config_path = os.path.abspath(config_path)
+            # Get the absolute path of the project root directory
+            project_root = os.path.abspath(os.path.dirname(__file__) + "/../../")
+            
+            # Resolve the absolute path of the config file relative to the project root
+            config_path = os.path.join(project_root, config_path)
+
             if not os.path.exists(config_path):
                 raise FileNotFoundError(f"Config file not found at {config_path}")
             try:

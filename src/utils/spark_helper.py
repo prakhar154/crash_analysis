@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
-from utils.logger import Logger
-from utils.config_loader import ConfigLoader
+from src.utils.logger import Logger
+from src.utils.config_loader import ConfigLoader
 
 class SparkHelper:
     """

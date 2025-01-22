@@ -17,5 +17,14 @@ fi
 python3 -m venv venv
 source venv/bin/activate
 
+
+# Get the absolute path to the directory containing this script
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Export the PYTHONPATH dynamically based on the project directory
+export PYTHONPATH="$PROJECT_ROOT:$PYTHONPATH"
+
+echo "PYTHONPATH set to: $PYTHONPATH"
+
 # Install dependencies
-# pip install -r requirements.txt
+pip3 install -r requirements.txt
